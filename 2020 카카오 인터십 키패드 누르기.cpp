@@ -3,7 +3,7 @@
 #include <cstdlib>
 using namespace std;
 int dir[12][2] = {{3,1},{0,0},{0,1},{0,2},{1,0},{1,1},{1,2},{2,0},{2,1},{2,2},{3,0},{3,2}};
-int get_distance(int num,int cur){
+int get_distance(int num,int cur){ // 유클리드 거리가 아닌 단순한 이동 거리로 계산 해야 했다. (4 / 8 / 2)인 경우처럼.
     int dist = -1;
     dist = abs(dir[num][0] - dir[cur][0]) + abs(dir[num][1] - dir[cur][1]);
     return dist;
